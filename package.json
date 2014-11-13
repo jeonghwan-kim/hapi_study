@@ -9,6 +9,7 @@
   "license": "ISC",
   "dependencies": {
     "good": "^3.1.0",
+    "good-console": "^2.0.1",
     "hapi": "^7.2.0",
     "joi": "^4.7.0"
   }

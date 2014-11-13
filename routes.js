@@ -29,4 +29,12 @@ module.exports = function(server) {
         }
     });
 
+    server.route({
+        method: 'GET',
+        path: '/boom',
+        handler: function(req, reply) {
+            throw 'boom!!!';
+        }
+    });
+
 };
