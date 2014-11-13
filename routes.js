@@ -1,5 +1,8 @@
 'use strict';
 
+
+var Joi = require('joi');
+
 module.exports = function(server) {
 
     server.route({
@@ -16,6 +19,13 @@ module.exports = function(server) {
         handler: function(req, reply) {
             var name = req.params.name;
             reply('Hello ' + name);
+        },
+        config: {
+            validate: {
+                params: {
+                    name: Joi.string().min(3).max(10)
+                }
+            }
         }
     });
 
