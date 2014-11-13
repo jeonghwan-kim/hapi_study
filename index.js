@@ -1,17 +1,13 @@
-var Hapi = require('hapi'),
-  Good = require('good'),
-  routes = require('./routes'),
-  server = new Hapi.Server('localhost', 8000);
+var Hapi = require('hapi');
 
-routes(server);
+var server = new Hapi.Server('localhost', 8000);
 
-server.pack.register(Good, function (err) {
-  if (err) {
-    throw err;
+server.route({
+  method: 'GET',
+  path: '/',
+  handler: function(req, reply) {
+    reply('server is running');
   }
-
-  server.start(function () {
-    server.log('info', 'Server running at: ' + server.info.uri);
-  });
-
 });
+
+server.start();
