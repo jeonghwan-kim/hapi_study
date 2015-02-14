@@ -1,28 +1,35 @@
 'use strict';
 
+var ctrl = require('./users.ctrl.js');
+var valid = require('./users.valid.js');
 
 module.exports = function (server) {
-
-  var users = ['Chris', 'Mod', 'Daniel', 'JT', 'Justin'];
 
   server.route({
     method: 'GET',
     path:'/users',
-    handler: function (req, reply) {
-      reply({users: users});
-    }
+    handler: ctrl.find
   });
 
   server.route({
     method: 'GET',
     path:'/users/{id}',
-    handler: function (req, reply) {
-      if (req.params.id < users.length) {
-        reply({user: users[req.params.id]});
-      } else {
-        reply('No user').code(404);
-      }
-    }
+    handler: ctrl.query,
+    config: { validate: valid.query() }
+  });
+
+  server.route({
+    method: 'POST',
+    path:'/users',
+    handler: ctrl.insert,
+    config: { validate: valid.insert() }
+  });
+
+  server.route({
+    method: 'DELETE',
+    path:'/users',
+    handler: ctrl.remove,
+    config: { validate: valid.remove() }
   });
 
 };
