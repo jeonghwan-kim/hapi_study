@@ -1,16 +1,28 @@
 {
-  "name": "hapi",
-  "version": "0.0.0",
-  "main": "index.js",
+  "name": "hapi_study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/index.js",
+  "dependencies": {
+    "good": "^3.1.1",
+    "good-file": "^3.1.0",
+    "good-console": "^2.0.1",
+    "hapi": "^7.5.2",
+    "joi": "^4.8.1"
+  },
+  "devDependencies": {},
   "scripts": {
+    "start": "node app/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeonghwan-kim/hapi_study.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "good": "^3.1.0",
-    "good-console": "^2.0.1",
-    "hapi": "^7.2.0",
-    "joi": "^4.7.0"
-  }
+  "bugs": {
+    "url": "https://github.com/jeonghwan-kim/hapi_study/issues"
+  },
+  "homepage": "https://github.com/jeonghwan-kim/hapi_study"
 }
