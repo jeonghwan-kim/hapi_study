@@ -4,11 +4,11 @@
   "description": "",
   "main": "app/index.js",
   "dependencies": {
-    "good": "^3.1.1",
-    "good-file": "^3.1.0",
-    "good-console": "^2.0.1",
-    "hapi": "^7.5.2",
-    "joi": "^4.8.1"
+    "good": "^5.1.1",
+    "good-console": "^4.1.0",
+    "good-file": "^4.0.2",
+    "hapi": "^8.2.0",
+    "joi": "^5.1.0"
   },
   "devDependencies": {},
   "scripts": {

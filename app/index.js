@@ -1,6 +1,13 @@
 var Hapi = require('hapi');
 
-var server = new Hapi.Server('localhost', 8000);
+var server = new Hapi.Server();
+server.connection({
+  host: 'localhost',
+  port: 8000
+});
+
+
+require('./components/logHelper')(server);
 
 require('./routes')(server);
 

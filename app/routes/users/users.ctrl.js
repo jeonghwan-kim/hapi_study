@@ -12,6 +12,7 @@ exports.query = function (req, reply) {
 
 exports.insert = function (req, reply) {
   users.push(req.payload.name);
+  req.log('info', req.payload.name + ' is inserted.');
   reply({users: users});
 };
 
