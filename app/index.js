@@ -9,7 +9,10 @@ server.connection({
 
 require('./components/logHelper')(server);
 
+require('./components/session')(server);
+
 require('./routes')(server);
+
 
 server.start(function() {
   console.log('Server is running at ' + server.info.uri);

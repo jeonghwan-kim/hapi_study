@@ -8,6 +8,7 @@
     "good-console": "^4.1.0",
     "good-file": "^4.0.2",
     "hapi": "^8.2.0",
+    "hapi-auth-cookie": "^2.0.0",
     "joi": "^5.1.0"
   },
   "devDependencies": {},
