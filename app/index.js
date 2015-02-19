@@ -17,3 +17,5 @@ require('./routes')(server);
 server.start(function() {
   console.log('Server is running at ' + server.info.uri);
 });
+
+module.exports = server;
